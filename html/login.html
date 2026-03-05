@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codecraft | Login</title>
+<link rel="stylesheet" href="../style/login.css">
+
+</head>
+<body>
+
+<main class="login-card">
+
+    <section class="form-section">
+        <div class="header">
+            <h1>Welcome Back</h1>
+            <p>Please enter your details to sign in.</p>
+        </div>
+
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="name@company.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+
+        <p class="footer-text">
+            Don't have an account?
+            <a href="./signup.html">Sign up for free</a>
+        </p>
+    </section>
+
+    <section class="image-section"></section>
+
+</main>
+
+</body>
+</html>
