@@ -1,0 +1,458 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar{
+    width:100%;
+    background:#0F0C29;
+}
+
+/* Container داخلي */
+.nav-container{
+    max-width:1300px;
+    margin:auto;
+    padding:22px 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Logo */
+.logo{
+    font-size:28px;
+    font-weight:800;
+    background:linear-gradient(90deg,#6C5CE7,#FF00FF);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-decoration:none;
+}
+
+/* Capsule */
+.nav-capsule{
+    display:flex;
+    align-items:center;
+    gap:38px; 
+    padding:14px 40px;
+    border:2px solid #6C5CE7;
+    border-radius:50px;
+    white-space:nowrap;
+}
+
+/* Links */
+.nav-capsule a{
+    color:#FFFFFF;
+    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:0.5px;
+    transition:0.3s;
+}
+
+.nav-capsule a:hover{
+    color:#FF00FF;
+}
+
+/* Buttons */
+.nav-buttons{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+/* Login */
+.login-btn{
+    padding:10px 26px;  
+    border:none;
+    border-radius:10px;
+    font-weight:600;
+    font-size:16px;
+    color:#fff;
+    cursor:pointer;
+    background:linear-gradient(90deg,#6C5CE7,#FF00FF);
+}
+
+/* Sign Up */
+.signup-btn{
+    padding:10px 28px;
+    border-radius:10px;
+    font-weight:600;
+    font-size:16px;
+    color:#0F0C29;
+    background:#E0D4FF;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 4px 14px rgba(108,92,231,0.35);
+    transition:0.3s;
+}
+
+.signup-btn:hover{
+    background:#d4c4ff;
+}
+
+/* ===== Mobile ===== */
+@media(max-width:768px){
+
+.nav-container{
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:18px 20px;
+    gap:15px;
+}
+
+.nav-capsule{
+    margin-top:15px;
+    gap:22px; 
+    padding:12px 24px;
+}
+
+.nav-capsule a{
+    font-size:16px;
+}
+
+.nav-buttons{
+    margin-top:15px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+font-family: 'Poppins', sans-serif;
+background:#F8F9FF;
+margin:0;
+padding:0;
+color:#0F0C29;
+}
+
+/* HEADER */
+
+header{
+padding:60px 10%;
+text-align:center;
+}
+
+header h1{
+font-size:42px;
+margin-bottom:10px;
+background: linear-gradient(90deg,#6C5CE7,#FF00FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+header p{
+color:#636E72;
+font-size:18px;
+}
+
+/* SEARCH */
+
+.search-box{
+width:100%;
+max-width:500px;
+margin:40px auto;
+}
+
+.search-box input{
+width:100%;
+padding:16px 20px;
+border-radius:40px;
+border:1px solid rgba(108,92,231,0.2);
+font-size:16px;
+outline:none;
+transition:.3s;
+}
+
+.search-box input:focus{
+border-color:#FF00FF;
+box-shadow:0 10px 30px rgba(108,92,231,0.15);
+}
+
+/* FAQ SECTION */
+
+.faq-section{
+width:90%;
+max-width:800px;
+margin:auto;
+}
+
+/* FAQ ITEM */
+
+details{
+background:#fff;
+border-radius:16px;
+margin-bottom:16px;
+border:1px solid rgba(108,92,231,0.2);
+overflow:hidden;
+transition:.3s;
+}
+
+details:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 30px rgba(0,0,0,0.05);
+}
+
+/* QUESTION */
+
+summary{
+padding:20px;
+font-weight:700;
+cursor:pointer;
+list-style:none;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+summary::-webkit-details-marker{
+display:none;
+}
+
+summary::after{
+content:"+";
+font-size:20px;
+color:#FF00FF;
+transition:.3s;
+}
+
+details[open] summary{
+background:linear-gradient(90deg,#6C5CE7,#FF00FF);
+color:#fff;
+}
+
+details[open] summary::after{
+content:"−";
+color:#fff;
+transform:rotate(180deg);
+}
+
+/* ANSWER */
+
+.answer{
+padding:20px;
+color:#636E72;
+line-height:1.8;
+background:#fff;
+animation:fade .4s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(-5px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* CONTACT CARD */
+
+.contact-card{
+margin:80px auto;
+width:90%;
+max-width:800px;
+background:#1A1642;
+color:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+.contact-card button{
+margin-top:20px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#FF00FF;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact-card button:hover{
+transform:scale(1.05);
+box-shadow:0 10px 30px rgba(255,0,255,.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --footer-bg:#1A1642;
+}
+
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:#f4f4f4;
+}
+
+/* ===== Footer ===== */
+.footer{
+    background:var(--footer-bg);
+    color:#FFFFFF;
+    padding:80px 0 40px;
+}
+
+.footer-container{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    padding:0 40px;
+    flex-wrap:wrap;
+}
+
+.footer-col{
+    margin-bottom:40px;
+    min-width:200px;
+}
+
+.brand-col{
+    flex:1.5;
+}
+
+.brand-col h3{
+    font-size:30px;
+    line-height:1.4;
+    font-weight:600;
+    max-width:450px;
+}
+
+.logo img{
+    height:130px;
+    margin-bottom:25px;
+}
+
+/* Titles */
+h5{
+    font-size:24px;
+    margin-bottom:25px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+/* Links */
+ul{
+    list-style:none;
+}
+
+ul li{
+    margin-bottom:15px;
+}
+
+ul li a{
+    color:rgba(255,255,255,0.8);
+    text-decoration:none;
+    font-size:20px;
+    transition:0.3s;
+}
+
+ul li a:hover{
+    color:#FF00FF;
+    text-shadow:0 0 10px rgba(255,0,255,0.5);
+}
+
+/* ===== Contact Icons ===== */
+.contact-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-list a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:20px;
+    text-decoration:none;
+    color:#FFFFFF;
+    transition:0.3s;
+}
+
+.contact-list a i{
+    font-size:24px;
+    width:28px;
+}
+
+/* Icon Colors */
+.fa-whatsapp{color:#25D366;}
+.fa-github{color:#6C5CE7;}
+.fa-envelope{color:#FF00FF;}
+
+.contact-list a:hover{
+    color:#FF00FF;
+    transform:translateX(6px);
+    text-shadow:0 0 12px rgba(255,0,255,0.6);
+}
+
+/* Footer Bottom */
+.footer-bottom{
+    border-top:1px solid rgba(108,92,231,0.2);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    font-size:16px;
+    color:#ccc;
+}
+
+@media(max-width:992px){
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .contact-list{
+        align-items:center;
+    }
+}
