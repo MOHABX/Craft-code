@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Browse Courses</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f3edf7;
+margin:0;
+padding:20px;
+width: 100%;
+box-sizing: border-box;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+.courses{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+padding:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+height:180px;
+object-fit:cover;
+}
+
+.card h3{
+margin:10px 0;
+}
+
+.rating{
+color:gold;
+}
+
+.price{
+color:green;
+font-weight:bold;
+margin:5px 0;
+}
+
+.btn{
+background:#7b3fe4;
+color:white;
+padding:8px 20px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#5e2cc9;
+}
+
+/* ===== Footer ===== */
+.footer{
+    background:#1A1642; 
+    color:#fff; 
+    padding:80px 0 40px;
+    width:100%;
+}
+.footer-container{
+    width:1300px; 
+    margin:auto; 
+    display:flex; 
+    justify-content:space-between; 
+    padding:0 40px; 
+    flex-wrap:wrap;
+}
+.footer-col{margin-bottom:40px; min-width:200px;}
+.brand-col{flex:1.5;}
+.brand-col h3{font-size:30px; line-height:1.4; font-weight:600; max-width:450px;}
+.logo img{height:80px; margin-bottom:25px;}
+h5{font-size:24px; margin-bottom:25px; font-weight:800; text-transform:uppercase;}
+ul{list-style:none;}
+ul li{margin-bottom:15px;}
+ul li a{color:rgba(255,255,255,0.8); text-decoration:none; font-size:20px; transition:0.3s;}
+ul li a:hover{color:#FF00FF; text-shadow:0 0 10px rgba(255,0,255,0.5);}
+.contact-list{display:flex; flex-direction:column; gap:18px;}
+.contact-list a{display:flex; align-items:center; gap:12px; font-size:20px; text-decoration:none; color:#FFFFFF; transition:0.3s;}
+.contact-list a i{font-size:24px; width:28px;}
+.fa-whatsapp{color:#25D366;}
+.fa-github{color:#6C5CE7;}
+.fa-envelope{color:#FF00FF;}
+.contact-list a:hover{color:#FF00FF; transform:translateX(6px); text-shadow:0 0 12px rgba(255,0,255,0.6);}
+.footer-bottom{border-top:1px solid rgba(108,92,231,0.2); margin-top:40px; padding-top:20px; text-align:center; font-size:16px; color:#ccc;}
+</style>
+</head>
+<body>
+
+
+
+<h1>Browse Courses</h1>
+
+<div class="courses" id="courses"></div>
+
+<script>
+
+const courseNames = [
+
+"HTML Basics","CSS Basics","JavaScript Basics","Web Design",
+"Frontend Development","Backend Development","Full Stack Development",
+"Python Programming","Data Analysis","Artificial Intelligence",
+
+"Machine Learning","Deep Learning","SQL Database","Database Management",
+"React Development","Angular Development","Vue Development",
+"Node.js Development","API Development","Git and GitHub",
+
+"Linux Basics","Cloud Computing","AWS Fundamentals","Cyber Security",
+"Network Fundamentals","UI Design","UX Design","Graphic Design",
+"Photoshop Basics","Illustrator Basics",
+
+"Digital Marketing","SEO Optimization","Social Media Marketing",
+"Content Marketing","Freelancing Basics","E-commerce Development",
+"WordPress Development","Shopify Development","Mobile App Development",
+"Flutter Development",
+
+"Android Development","iOS Development","Game Development",
+"Unity Game Engine","C# Programming","Java Programming",
+"C++ Programming","Algorithms and Data Structures",
+"Software Testing","DevOps Basics",
+
+"Docker Basics","Kubernetes Basics","Blockchain Basics",
+"Web Security","Performance Optimization","Responsive Web Design",
+"Progressive Web Apps","REST API Development","GraphQL Basics",
+"Software Engineering"
+
+];
+
+const images = [
+"https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+"https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+"https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+"https://images.unsplash.com/photo-1581093588401-12c1c7f1b5b6",
+"https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+"https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+];
+
+const container = document.getElementById("courses");
+
+courseNames.forEach((course, index)=>{
+
+container.innerHTML += `
+
+<div class="card">
+
+<img src="${images[index % images.length]}">
+
+<h3>${course}</h3>
+
+<p>Learn ${course}</p>
+
+<div class="rating">★★★★★</div>
+
+
+
+<button class="btn">Enroll Now</button>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-col brand-col">
+<div class="logo">
+<img src="../img/logo.png" alt="Logo">
+</div>
+<h3>CODECRAFT is a constant success story in software and software development.</h3>
+</div>
+
+<div class="footer-col">
+<h5>Quick Links</h5>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Resources</h5>
+<ul>
+<li><a href="#">FAQs</a></li>
+<li><a href="#">Terms</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Support</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Contact Us</h5>
+<div class="contact-list">
+<a href="https://wa.me/201150726374" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+<a href="https://github.com/YOUR_USERNAME" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+<a href="mailto:marwamohamed254@gmail.com"><i class="fas fa-envelope"></i>Email</a>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+Copyright © 2023 CODECRAFT. All rights reserved.
+</div>
+</footer>
+
+</body>
+</html>
