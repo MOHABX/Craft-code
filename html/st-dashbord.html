@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Dashboard - White Mode</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="../style/st-dashbord.css">
+</head>
+<body>
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="logo">SMART</div>
+            <nav>
+                <div class="nav-item active"><i class="fas fa-th-large"></i> Dashboard</div>
+                <div class="nav-item"><i class="fas fa-graduation-cap"></i> Courses</div>
+                <div class="nav-item"><i class="fas fa-book"></i> Homework</div>
+                <div class="nav-item"><i class="fas fa-comment-dots"></i> Messages</div>
+                <div class="nav-item"><i class="fas fa-cog"></i> Setting</div>
+            </nav>
+            <div class="logout-btn"><i class="fas fa-sign-out-alt"></i> Log out</div>
+        </aside>
+
+        <main class="content">
+            <header class="top-bar">
+                <h1>Hello, Sara!</h1>
+                <div class="user-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <img src="https://i.pravatar.cc/150?u=sara" alt="User" class="avatar">
+                </div>
+            </header>
+
+            <div class="grid-layout">
+                <section class="left-col">
+                    <div class="stats-row">
+                        <div class="stat-box"><h2>95.3</h2><span>GPA</span></div>
+                        <div class="stat-box"><h2>12/45</h2><span>Attended</span></div>
+                        <div class="stat-box"><h2>55h</h2><span>Productivity</span></div>
+                    </div>
+
+                    <div class="classes-section">
+                        <div class="class-card">
+                            <div class="info">
+                                <img src="https://i.pravatar.cc/50?u=1" alt="">
+                                <div><strong>Dr. Michael Kim</strong><p>AI in Business</p></div>
+                            </div>
+                            <div class="time">March 27, 2025 5:00 PM</div>
+                            <button class="btn-join">Join</button>
+                        </div>
+                        <div class="class-card">
+                            <div class="info">
+                                <img src="https://i.pravatar.cc/50?u=2" alt="">
+                                <div><strong>Dr. Emily Chen</strong><p>AI Ethics & Apps</p></div>
+                            </div>
+                            <div class="time">March 27, 2025 6:00 PM</div>
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Upcoming events</h3>
+                    <div class="events-row">
+                        <div class="event-card purple-card">
+                            <div class="img-placeholder"></div>
+                            <h4>AI Tech Summit</h4>
+                            <p><i class="far fa-calendar"></i> April 5, 2025</p>
+                        </div>
+                        <div class="event-card purple-card">
+                            <div class="img-placeholder"></div>
+                            <h4>AI Hackathon</h4>
+                            <p><i class="far fa-calendar"></i> April 25, 2025</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="right-col">
+                    <div class="calendar-mini">
+                        <div class="cal-head">March 2025 <div class="arrows">< ></div></div>
+                        <div class="days-list">
+                            <div>Mon 24</div><div>Tue 25</div><div class="highlight">Wed 27</div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-box">
+                        <h3>Schedule</h3>
+                        <div class="timeline">
+                            <div class="time-mark">09 AM <div class="task-label">Python for AI</div></div>
+                            <div class="time-mark">10 AM</div>
+                            <div class="time-mark">11 AM <div class="task-label">Neural Networks</div></div>
+                            <div class="time-mark">12 AM</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../"></script>
+</body>
+</html>
