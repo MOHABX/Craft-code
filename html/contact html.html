@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact Code Craft</title>
 
+=======
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – CodeCraft</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+>>>>>>> update pages, styles and add new sections
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
+<<<<<<< HEAD
 /* Background */
 
 body{
@@ -26,10 +35,90 @@ color:white;
 
 h1{
 font-size:38px;
+=======
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* ===== Body ===== */
+
+body{
+background:#F8F9FF;
+color:#0F0C29;
+
+}
+
+/* ===== Navbar ===== */
+
+.navbar{
+width:100%;
+background:#0F0C29;
+position:static;
+top:0;
+left:0;
+z-index:1000;
+}
+
+.nav-container{
+max-width:1300px;
+margin:auto;
+padding:22px 70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+background:linear-gradient(90deg,#6C5CE7,#FF00FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-decoration:none;
+}
+
+.nav-capsule{
+display:flex;
+align-items:center;
+gap:50px;
+padding:14px 30px;
+border:2px solid #6C5CE7;
+border-radius:50px;
+margin-right: 350px;
+}
+
+.nav-capsule a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
+font-size:16px;
+transition:.3s;
+}
+
+.nav-capsule a:hover{
+color:#FF00FF;
+}
+
+/* ===== Contact Section ===== */
+
+.contact-container{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+text-align:center;
+}
+
+.contact-container h1{
+font-size:40px;
+>>>>>>> update pages, styles and add new sections
 margin-bottom:10px;
 }
 
 .subtitle{
+<<<<<<< HEAD
 opacity:.9;
 margin-bottom:45px;
 text-align:center;
@@ -111,6 +200,51 @@ color:#1877F2;
 .card-title{
 font-weight:600;
 margin-bottom:8px;
+=======
+opacity:.8;
+margin-bottom:50px;
+}
+
+/* ===== Cards ===== */
+
+.contact-grid{
+display:flex;
+gap:25px;
+margin-bottom:40px;
+}
+
+.contact-card{
+background:#fff;
+flex:1;
+border-radius:18px;
+padding:35px 20px;
+text-align:center;
+color:#0F0C29;
+text-decoration:none;
+border:1px solid rgba(108,92,231,0.15);
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.contact-card:hover{
+transform:translateY(-8px);
+border-color:#FF00FF;
+box-shadow:0 20px 40px rgba(255,0,255,0.15);
+}
+
+.icon{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.whatsapp .icon{color:#25D366;}
+.facebook .icon{color:#1877F2;}
+.email .icon{color:#EA4335;}
+
+.card-title{
+font-weight:600;
+margin-bottom:6px;
+>>>>>>> update pages, styles and add new sections
 }
 
 .card-link{
@@ -118,6 +252,7 @@ font-size:14px;
 color:#666;
 }
 
+<<<<<<< HEAD
 /* Form */
 
 .form-wrapper{
@@ -224,6 +359,118 @@ box-shadow:0 10px 20px rgba(0,0,0,.3);
 /* Responsive */
 
 @media(max-width:768px){
+=======
+/* ===== Form ===== */
+
+.form-wrapper{
+background:#fff;
+border-radius:20px;
+padding:35px;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+border:1px solid rgba(108,92,231,0.15);
+}
+
+.form-row{
+display:flex;
+gap:15px;
+margin-bottom:15px;
+}
+
+.input-field{
+flex:1;
+padding:14px;
+border:2px solid #6C5CE7;
+border-radius:10px;
+outline:none;
+transition:.3s;
+}
+
+.input-field:focus{
+border-color:#FF00FF;
+box-shadow:0 0 10px rgba(255,0,255,.15);
+}
+
+textarea.input-field{
+width:100%;
+height:120px;
+resize:none;
+margin-top:15px;
+}
+
+.submit-btn{
+margin-top:15px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:linear-gradient(135deg,#6C5CE7,#FF00FF);
+color:#fff;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.submit-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(255,0,255,.4);
+}
+
+/* ===== Footer ===== */
+
+.footer{
+background:#1A1642;
+color:#fff;
+padding:60px 0 30px;
+margin-top:80px;
+}
+
+.footer-container{
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+padding:0 40px;
+flex-wrap:wrap;
+}
+
+.footer-col{
+margin-bottom:30px;
+min-width:200px;
+}
+
+.footer-col h5{
+margin-bottom:15px;
+}
+
+.footer-col ul{
+list-style:none;
+}
+
+.footer-col ul li{
+margin-bottom:10px;
+}
+
+.footer-col ul li a{
+color:#ccc;
+text-decoration:none;
+}
+
+.footer-col ul li a:hover{
+color:#FF00FF;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:20px;
+border-top:1px solid rgba(255,255,255,.2);
+padding-top:15px;
+font-size:14px;
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:900px){
+>>>>>>> update pages, styles and add new sections
 
 .contact-grid{
 flex-direction:column;
@@ -233,14 +480,25 @@ flex-direction:column;
 flex-direction:column;
 }
 
+<<<<<<< HEAD
 }
 
 </style>
 
+=======
+.nav-capsule{
+display:none;
+}
+
+}
+
+</style>
+>>>>>>> update pages, styles and add new sections
 </head>
 
 <body>
 
+<<<<<<< HEAD
 <h1>Contact Code Craft</h1>
 
 <p class="subtitle">
@@ -318,5 +576,110 @@ Send Message
 
 </div>
 
+=======
+<!-- Navbar -->
+
+<nav class="navbar">
+<div class="nav-container">
+
+<a href="#" class="logo">CodeCraft</a>
+
+<div class="nav-capsule">
+<a href="home.html">Home</a>
+<a href="courses.html">Courses</a>
+<a href="FAQS.html">FAQS</a>
+<a href="about.html">About Us</a>
+</div>
+
+</div>
+</nav>
+
+
+<!-- Contact Section -->
+
+<section class="contact-container">
+
+<h1>Contact Us</h1>
+<p class="subtitle">We are here to help you build your future.</p>
+
+<div class="contact-grid">
+
+<a href="mailto:hossamadel763@gmail.com" class="contact-card email">
+<div class="icon"><i class="fa-solid fa-envelope"></i></div>
+<div class="card-title">Email</div>
+<div class="card-link">hossamadel763@gmail.com</div>
+</a>
+
+<a href="https://wa.me/201150726374" class="contact-card whatsapp" target="_blank">
+<div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+<div class="card-title">WhatsApp</div>
+<div class="card-link">01150726374</div>
+</a>
+
+<a href="https://www.facebook.com/share/1CGAxYvrKE/" class="contact-card facebook" target="_blank">
+<div class="icon"><i class="fa-brands fa-facebook"></i></div>
+<div class="card-title">Facebook</div>
+<div class="card-link">Rehab Hossam</div>
+</a>
+
+</div>
+
+<div class="form-wrapper">
+
+<form>
+
+<div class="form-row">
+<input type="text" class="input-field" placeholder="Your Name" required>
+<input type="email" class="input-field" placeholder="Your Email" required>
+</div>
+
+<textarea class="input-field" placeholder="How can we help?" required></textarea>
+
+<button type="submit" class="submit-btn">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+<h5>CodeCraft</h5>
+<p>Learn programming and build real projects with us.</p>
+</div>
+
+<div class="footer-col">
+<h5>Quick Links</h5>
+<ul>
+<li><a href="home.html">home</a></li>
+<li><a href="track.html">Learning Path</a></li>
+<li><a href="FAQS.html">FAQS</a></li>
+<li><a href="contact html.html">Contact us</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Contact</h5>
+<p><i class="fab fa-whatsapp"></i> WhatsApp</p>
+<p><i class="fab fa-github"></i> GitHub</p>
+<p><i class="fas fa-envelope"></i> Email</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 CodeCraft. All Rights Reserved.
+</div>
+
+</footer>
+
+>>>>>>> update pages, styles and add new sections
 </body>
 </html>

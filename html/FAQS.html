@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8>">
+    <title>craft code</title>
+    <link rel="stylesheet" href="../style/FAQS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+
+
+
+
+ <body>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+<div class="nav-container">
+<a href="#" class="logo">CodeCraft</a>
+
+<div class="nav-capsule">
+<a href="../html/home.html">Home</a>
+<a href="../html/courses.html">Courses</a>
+<a href="../html/dr-dInstructor.html">Instructors</a>
+<a href="../html/contact html.html.html">Contact Us</a>
+<a href="../html/about.html">About Us</a>
+</div>
+
+<div class="nav-buttons">
+<button class="login-btn">Login</button>
+<button class="signup-btn">Sign Up</button>
+</div>
+</div>
+</nav>
+
+<section class="faq">
+
+<h1>Frequently Asked Questions</h1>
+
+<p class="faq-desc">
+Find answers to the most common questions about our platform, courses, and technical support.
+</p>
+
+<input type="text" class="search-box" placeholder="Search for a question...">
+
+
+<div class="faq-container">
+
+<div class="faq-card">
+
+<button class="faq-question">
+How do I create a new account?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+To create a new account, click the Sign Up button at the top of the page,
+enter your name, email address, and password, then confirm your email.
+</div>
+
+</div>
+
+
+<div class="faq-card">
+
+<button class="faq-question">
+How can I reset my password?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Go to the login page and click “Forgot Password”.
+Enter your registered email address and follow the instructions
+to create a new password.
+</div>
+
+</div>
+
+
+<div class="faq-card">
+
+<button class="faq-question">
+How do I access the courses I purchased?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+After purchasing a course, go to your Student Dashboard
+where all your enrolled courses will appear.
+</div>
+
+</div>
+
+
+<div class="faq-card">
+
+<button class="faq-question">
+Can I download course materials?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Yes, some courses provide downloadable materials such as PDFs,
+code files, and additional resources.
+</div>
+
+</div>
+
+</div>
+
+</section>
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col brand-col">
+<div class="logo">
+<img src="../img/logo.png" alt="Logo">
+</div>
+<h3>CODECRAFT is a constant success story in software and software development.</h3>
+</div>
+
+<div class="footer-col">
+<h5>Quick Links</h5>
+<ul>
+<li><a href="../html/home.html">Home</a></li>
+<li><a href="../html/courses.html">courses</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Resources</h5>
+<ul>
+<li><a href="#">FAQs</a></li>
+<li><a href="#">Terms</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Support</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Contact Us</h5>
+
+<div class="contact-list">
+
+<a href="https://wa.me/201150726374" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+<a href="https://github.com/YOUR_USERNAME" target="_blank">
+<i class="fab fa-github"></i>
+GitHub
+</a>
+
+<a href="mailto:marwamohamed254@gmail.com">
+<i class="fas fa-envelope"></i>
+Email
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+Copyright © 2026 CODECRAFT. All rights reserved.
+</div>
+
+</footer>
+
+
+<script>
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(question => {
+
+question.addEventListener("click", () => {
+
+const card = question.parentElement;
+
+card.classList.toggle("active");
+
+});
+
+});
+
+</script>
+
+
+</body>
+</html>

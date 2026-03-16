@@ -338,16 +338,17 @@ body{
             opacity: 0.9;
         }
 
-        .info-track input {
+        /*.info-track input */.start{
             background-image:linear-gradient(to right, #6C5CE7, #FF00FF);;
             color: #fff;
             border: none;
             padding: 12px;
-            width: 100%;
+             width: 100%;
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
             transition: 0.5s;
+            text-decoration-line: none;
         }
         .info-track input:hover{
             scale: 1.05;

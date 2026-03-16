@@ -1,20 +1,24 @@
-/* ======================= Base ======================= */
-*{
+
+ 
+ *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background-color:#F8F9FF;
-color:#0F0C29;
-}
 
+background:#F4F2FB;
+color:#0F0C29;
+/*padding:60px 20px;*/
+
+}
 /* ======================= Navbar ======================= */
 .navbar{
 width:100%;
 background:#0F0C29;
+margin-bottom: 50px;
 }
 
 .nav-container{
@@ -91,156 +95,126 @@ transition:0.3s;
 background:#d4c4ff;
 }
 
-/* ======================= Assignment Page ======================= */
-.assignment-container{
-width:100%;
-max-width:1200px;
-margin:40px auto;
-}
+.faq{
 
-/* Header */
-.assignment-header{
-border:2px solid #FF00FF;
-border-radius:20px;
-padding:20px 40px;
-display:flex;
-align-items:center;
-gap:30px;
-box-shadow:0 0 20px rgba(108,92,231,0.2);
-margin-bottom:40px;
-flex-wrap:wrap;
-}
-
-.badge{
-background:rgba(255,255,255,0.05);
-padding:10px 20px;
-border-radius:12px;
-border-right:3px solid #FF00FF;
-}
-
-/* Grid */
-.content-grid{
-display:grid;
-grid-template-columns:300px 1fr;
-gap:30px;
-}
-
-/* Sidebar */
-.sidebar{
-background:#FFFFFF;
-width:100%;
-padding:30px;
-border-radius:25px;
-border:1px solid rgba(108,92,231,0.15);
-height:fit-content;
-}
-
-.info-row{
-display:flex;
-gap:15px;
-margin-bottom:25px;
-align-items:center;
-}
-
-.icon-box{
-background:#6C5CE7;
-width:40px;
-height:40px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-flex-shrink:0;
-}
-
-.description{
-font-size:0.9rem;
-line-height:1.6;
-color:#636E72;
-}
-
-/* Upload Section */
-.upload-main{
-flex:1;
-}
-
-.drop-zone{
-background: #FFFFFF;
-border:2px dashed rgba(108,92,231,0.1);
-border-radius:30px;
-padding:60px;
+max-width:900px;
+margin:auto;
 text-align:center;
-cursor:pointer;
+
 }
 
-.drop-zone.drag-over{
+.faq h1{
+
+font-size:40px;
+margin-bottom:10px;
+color:#6C5CE7;
+
+}
+
+.faq-desc{
+
+color:#666;
+margin-bottom:30px;
+
+}
+
+/* Search Box */
+
+.search-box{
+
+width:100%;
+max-width:500px;
+padding:14px 20px;
+border-radius:30px;
+border:2px solid #6C5CE7;
+outline:none;
+margin-bottom:40px;
+transition:0.3s;
+
+}
+
+.search-box:hover{
+
 border-color:#FF00FF;
-background:rgba(255,0,255,0.05);
+box-shadow:0 4px 10px rgba(255,0,255,0.15);
+
 }
 
-.glow-cloud{
-font-size:60px;
-filter:drop-shadow(0 0 15px #6C5CE7);
-margin-bottom:20px;
+/* FAQ Container */
+
+.faq-container{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
 }
 
-/* Progress Bar */
-.progress-container{
-width:80%;
-height:8px;
-background:rgba(108,92,231,0.1);
-border-radius:10px;
-margin:20px auto;
+/* FAQ Cards */
+
+.faq-card{
+
+background:#FFFFFF;
+border-radius:12px;
+border-top:5px solid #FF00FF;
 overflow:hidden;
-display:none;
+transition:0.3s;
+height: 100px;
+
 }
 
-.progress-bar{
-width:0%;
-height:100%;
-background:linear-gradient(90deg,#6C5CE7,#FF00FF);
-transition:width 0.3s;
+.faq-card:hover{
+
+border-top:5px solid #6C5CE7;
+box-shadow:0 8px 20px rgba(108,92,231,0.15);
+
 }
 
-/* Inputs */
-.comment-input{
-background:rgba(0,0,0,0.05);
-border:1px solid #6C5CE7;
-border-radius:15px;
-padding:15px;
+/* Question */
+
+.faq-question{
+
 width:100%;
-margin:15px 0;
-font-size:16px;
-}
-
-/* Submit Button */
-.btn-submit{
-background:linear-gradient(90deg,#6C5CE7,#FF00FF);
-color:white;
+background:none;
 border:none;
-padding:20px 45px;
-border-radius:15px;
-font-size:20px;
-font-weight:800;
+padding:18px 20px;
+font-size:16px;
+font-weight:600;
+display:flex;
+justify-content:space-between;
+align-items:center;
 cursor:pointer;
-width:100%;
+color:#0F0C29;
+
 }
 
-/* Sidebar Message */
-.sidebar-message{
-margin-bottom:20px;
-padding:15px;
-background-color:#E0D4FF;
-border-left:4px solid #6C5CE7;
-border-radius:10px;
-font-weight:600;
-color:#0F0C29;
+/* Answer */
+
+.faq-answer{
+
+max-height:0;
+overflow:hidden;
+padding:0 20px;
+color:#555;
+transition:max-height 0.3s ease;
+
 }
+
+/* Active */
+
+.faq-card.active .faq-answer{
+
+max-height:150px;
+padding-bottom:20px;
+
+}
+
 
 .footer{
 background:#1A1642;
 color:#FFFFFF;
 padding:80px 0 40px;
+margin-top: 50px;
 }
 
 .footer-container{
@@ -352,4 +326,8 @@ align-items:center;
 }
 
 }
+
+
+
+
 

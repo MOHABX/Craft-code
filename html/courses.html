@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CodeCraft Courses</title>
+<<<<<<< HEAD
 
 <!-- Font for Navbar -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -203,6 +204,38 @@ ul li a:hover{color:#FF00FF; text-shadow:0 0 10px rgba(255,0,255,0.5);}
 .fa-envelope{color:#FF00FF;}
 .contact-list a:hover{color:#FF00FF; transform:translateX(6px); text-shadow:0 0 12px rgba(255,0,255,0.6);}
 .footer-bottom{border-top:1px solid rgba(108,92,231,0.2); margin-top:40px; padding-top:20px; text-align:center; font-size:16px; color:#ccc;}
+=======
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#F8F9FF;color:#0F0C29;}
+.navbar{width:100%;background:#0F0C29;}
+.nav-container{max-width:1300px;margin:auto;padding:22px 70px;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:28px;font-weight:800;background:linear-gradient(90deg,#6C5CE7,#FF00FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;}
+.nav-capsule{display:flex;align-items:center;gap:38px;padding:14px 40px;border:2px solid #6C5CE7;border-radius:50px;white-space:nowrap;}
+.nav-capsule a{color:#FFFFFF;text-decoration:none;font-weight:600;font-size:18px;transition:0.3s;}
+.nav-capsule a:hover{color:#FF00FF;}
+.section{max-width:1300px;margin:40px auto;padding:0 20px;text-align:center;}
+.section h2{font-size:36px;margin-bottom:30px;}
+.cards-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;justify-items:center;}
+.card{background:#FFFFFF;border:1px solid rgba(108,92,231,0.15);padding:30px;border-radius:15px;text-align:center;transition:0.3s;width:270px;}
+.card:hover{border-color:#FF00FF;box-shadow:0 0 20px rgba(255,0,255,0.2);}
+.card h3{font-size:28px;margin-bottom:15px;}
+.card p{font-size:18px;margin-bottom:15px;line-height:1.5;}
+.btn-view{display:inline-block;padding:12px 24px;font-weight:600;font-size:16px;color:#fff;background:linear-gradient(90deg,#6C5CE7,#FF00FF);border-radius:8px;text-decoration:none;}
+.btn-view:hover{box-shadow:0 0 25px rgba(255,0,255,0.8);}
+.footer{background:#1A1642;color:#FFFFFF;padding:80px 20px 40px;}
+.footer-container{max-width:1300px;margin:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.footer-col{min-width:200px;}
+.footer-col h5{font-size:24px;margin-bottom:25px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:12px;}
+.footer-col ul li a{color:white;text-decoration:none;}
+.contact-list{display:flex;flex-direction:column;gap:15px;}
+.contact-list a{display:flex;align-items:center;gap:10px;color:white;text-decoration:none;}
+.contact-list img{width:30px;height:30px;}
+.footer-bottom{margin-top:40px;text-align:center;}
+>>>>>>> update pages, styles and add new sections
 </style>
 </head>
 <body>
@@ -213,6 +246,7 @@ ul li a:hover{color:#FF00FF; text-shadow:0 0 10px rgba(255,0,255,0.5);}
 <a href="#" class="logo">CodeCraft</a>
 <div class="nav-capsule">
 <a href="#">Home</a>
+<<<<<<< HEAD
 <a href="#">Courses</a>
 <a href="#">Instructors</a>
 <a href="#">Contact</a>
@@ -221,10 +255,16 @@ ul li a:hover{color:#FF00FF; text-shadow:0 0 10px rgba(255,0,255,0.5);}
 <div class="nav-buttons">
 <button class="login-btn">Login</button>
 <button class="signup-btn">Sign Up</button>
+=======
+<a href="#">Learning</a>
+<a href="#">FAQs</a>
+<a href="#">Student Dashboard</a>
+>>>>>>> update pages, styles and add new sections
 </div>
 </div>
 </nav>
 
+<<<<<<< HEAD
 <!-- Search -->
 <div class="search-container">
     <input type="text" class="search-input" placeholder="Search for a course..." id="searchInput">
@@ -294,17 +334,100 @@ function searchCourse(){
     if(!found) alert("No courses found!");
 }
 </script>
+=======
+<!-- Full Stack Section -->
+<section class="section">
+<h2>Full Stack Development</h2>
+<div class="cards-container">
+<!-- 20 Cards Full Stack -->
+<div class="card"><h3>Front-End Development</h3><p>12 Sessions | Total 24h<br>HTML, CSS, JS<br>Build responsive apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Back-End Development</h3><p>10 Sessions | Total 25h<br>Server, DB, API<br>Deploy apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Mobile App Development</h3><p>8 Sessions | Total 24h<br>React Native apps<br>iOS & Android</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Web Development</h3><p>15 Sessions | Total 22.5h<br>Full stack projects<br>Front + Back integration</p><a class="btn-view" href="#">View</a></div>
+<!-- كرر هذه الأربعة 5 مرات ليصبح المجموع 20 كارد -->
+<div class="card"><h3>Front-End Development</h3><p>12 Sessions | Total 24h<br>HTML, CSS, JS<br>Build responsive apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Back-End Development</h3><p>10 Sessions | Total 25h<br>Server, DB, API<br>Deploy apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Mobile App Development</h3><p>8 Sessions | Total 24h<br>React Native apps<br>iOS & Android</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Web Development</h3><p>15 Sessions | Total 22.5h<br>Full stack projects<br>Front + Back integration</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Front-End Development</h3><p>12 Sessions | Total 24h<br>HTML, CSS, JS<br>Build responsive apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Back-End Development</h3><p>10 Sessions | Total 25h<br>Server, DB, API<br>Deploy apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Mobile App Development</h3><p>8 Sessions | Total 24h<br>React Native apps<br>iOS & Android</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Web Development</h3><p>15 Sessions | Total 22.5h<br>Full stack projects<br>Front + Back integration</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Front-End Development</h3><p>12 Sessions | Total 24h<br>HTML, CSS, JS<br>Build responsive apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Back-End Development</h3><p>10 Sessions | Total 25h<br>Server, DB, API<br>Deploy apps</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Mobile App Development</h3><p>8 Sessions | Total 24h<br>React Native apps<br>iOS & Android</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Web Development</h3><p>15 Sessions | Total 22.5h<br>Full stack projects<br>Front + Back integration</p><a class="btn-view" href="#">View</a></div>
+</div>
+</section>
+
+<!-- AI Section -->
+<section class="section">
+<h2>Artificial Intelligence</h2>
+<div class="cards-container">
+<!-- 20 AI Cards -->
+<div class="card"><h3>Machine Learning</h3><p>10 Sessions | Total 20h<br>Regression, classification<br>Python projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Deep Learning</h3><p>8 Sessions | Total 20h<br>Neural networks, CNNs<br>Hands-on projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>AI for Business</h3><p>6 Sessions | Total 18h<br>Predictive analytics<br>Automation & strategy</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Natural Language Processing</h3><p>7 Sessions | Total 14h<br>Text analytics<br>Chatbots & NLP libraries</p><a class="btn-view" href="#">View</a></div>
+<!-- كرر هذه 4 كارد 5 مرات لتصبح 20 -->
+<div class="card"><h3>Machine Learning</h3><p>10 Sessions | Total 20h<br>Regression, classification<br>Python projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Deep Learning</h3><p>8 Sessions | Total 20h<br>Neural networks, CNNs<br>Hands-on projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>AI for Business</h3><p>6 Sessions | Total 18h<br>Predictive analytics<br>Automation & strategy</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Natural Language Processing</h3><p>7 Sessions | Total 14h<br>Text analytics<br>Chatbots & NLP libraries</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Machine Learning</h3><p>10 Sessions | Total 20h<br>Regression, classification<br>Python projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Deep Learning</h3><p>8 Sessions | Total 20h<br>Neural networks, CNNs<br>Hands-on projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>AI for Business</h3><p>6 Sessions | Total 18h<br>Predictive analytics<br>Automation & strategy</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Natural Language Processing</h3><p>7 Sessions | Total 14h<br>Text analytics<br>Chatbots & NLP libraries</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Machine Learning</h3><p>10 Sessions | Total 20h<br>Regression, classification<br>Python projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Deep Learning</h3><p>8 Sessions | Total 20h<br>Neural networks, CNNs<br>Hands-on projects</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>AI for Business</h3><p>6 Sessions | Total 18h<br>Predictive analytics<br>Automation & strategy</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Natural Language Processing</h3><p>7 Sessions | Total 14h<br>Text analytics<br>Chatbots & NLP libraries</p><a class="btn-view" href="#">View</a></div>
+</div>
+</section>
+
+<!-- Cyber Security Section -->
+<section class="section">
+<h2>Cyber Security</h2>
+<div class="cards-container">
+<!-- 20 Cyber Security Cards -->
+<div class="card"><h3>Network Security</h3><p>10 Sessions | Total 20h<br>Firewalls, VPNs<br>Monitoring practices</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Ethical Hacking</h3><p>12 Sessions | Total 18h<br>Pen-testing, vulnerabilities<br>Tools & methods</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cryptography</h3><p>8 Sessions | Total 16h<br>Encryption techniques<br>Secure communications</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cyber Security Fundamentals</h3><p>6 Sessions | Total 12h<br>Core concepts<br>Risk management & protection</p><a class="btn-view" href="#">View</a></div>
+<!-- كرر هذه 4 كارد 5 مرات لتصبح 20 -->
+<div class="card"><h3>Network Security</h3><p>10 Sessions | Total 20h<br>Firewalls, VPNs<br>Monitoring practices</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Ethical Hacking</h3><p>12 Sessions | Total 18h<br>Pen-testing, vulnerabilities<br>Tools & methods</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cryptography</h3><p>8 Sessions | Total 16h<br>Encryption techniques<br>Secure communications</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cyber Security Fundamentals</h3><p>6 Sessions | Total 12h<br>Core concepts<br>Risk management & protection</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Network Security</h3><p>10 Sessions | Total 20h<br>Firewalls, VPNs<br>Monitoring practices</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Ethical Hacking</h3><p>12 Sessions | Total 18h<br>Pen-testing, vulnerabilities<br>Tools & methods</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cryptography</h3><p>8 Sessions | Total 16h<br>Encryption techniques<br>Secure communications</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cyber Security Fundamentals</h3><p>6 Sessions | Total 12h<br>Core concepts<br>Risk management & protection</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Network Security</h3><p>10 Sessions | Total 20h<br>Firewalls, VPNs<br>Monitoring practices</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Ethical Hacking</h3><p>12 Sessions | Total 18h<br>Pen-testing, vulnerabilities<br>Tools & methods</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cryptography</h3><p>8 Sessions | Total 16h<br>Encryption techniques<br>Secure communications</p><a class="btn-view" href="#">View</a></div>
+<div class="card"><h3>Cyber Security Fundamentals</h3><p>6 Sessions | Total 12h<br>Core concepts<br>Risk management & protection</p><a class="btn-view" href="#">View</a></div>
+</div>
+</section>
+>>>>>>> update pages, styles and add new sections
 
 <!-- Footer -->
 <footer class="footer">
 <div class="footer-container">
 <div class="footer-col brand-col">
+<<<<<<< HEAD
 <div class="logo">
 <img src="../img/logo.png" alt="Logo">
 </div>
 <h3>CODECRAFT is a constant success story in software and software development.</h3>
 </div>
 
+=======
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" style="width:80px;margin-bottom:10px;">
+<div class="logo">Logo</div>
+<h3>CODECRAFT is a constant success story in software and software development.</h3>
+</div>
+>>>>>>> update pages, styles and add new sections
 <div class="footer-col">
 <h5>Quick Links</h5>
 <ul>
@@ -314,7 +437,10 @@ function searchCourse(){
 <li><a href="#">Contact</a></li>
 </ul>
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> update pages, styles and add new sections
 <div class="footer-col">
 <h5>Resources</h5>
 <ul>
@@ -324,6 +450,7 @@ function searchCourse(){
 <li><a href="#">Support</a></li>
 </ul>
 </div>
+<<<<<<< HEAD
 
 <div class="footer-col">
 <h5>Contact Us</h5>
@@ -338,6 +465,18 @@ function searchCourse(){
 <div class="footer-bottom">
 Copyright © 2023 CODECRAFT. All rights reserved.
 </div>
+=======
+<div class="footer-col">
+<h5>Contact Us</h5>
+<div class="contact-list">
+<a href="https://wa.me/201150726374"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> WhatsApp</a>
+<a href="#"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"> GitHub</a>
+<a href="mailto:marwamohamed254@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg"> Email</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">Copyright © 2023 CODECRAFT. All rights reserved.</div>
+>>>>>>> update pages, styles and add new sections
 </footer>
 
 </body>
