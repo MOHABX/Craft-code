@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+body { margin:0; font-family:'Poppins',sans-serif; background:#F8F9FF; display:flex; flex-direction:column; align-items:center; }
+
+/* --- Navbar --- */
+.navbar { width:100%; background:#0F0C29; box-shadow:0 4px 15px rgba(0,0,0,0.2); position:sticky; top:0; z-index:1000; }
+.nav-container { max-width:1300px; margin:auto; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; }
+.logo { font-size:26px; font-weight:800; background:linear-gradient(90deg,#6C5CE7,#FF00FF); -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-decoration:none; }
+.nav-content-wrapper { display:flex; align-items:center; gap:20px; }
+.nav-capsule { display:flex; align-items:center; gap:15px; padding:10px 25px; border:2px solid #6C5CE7; border-radius:50px; }
+.nav-capsule a { color:#fff; text-decoration:none; font-weight:600; font-size:15px; text-transform:capitalize; transition:0.3s; }
+.nav-capsule a:hover { color:#FF00FF; }
+.nav-profile img { width:45px; height:45px; border-radius:50%; border:2px solid #FF00FF; cursor:pointer; object-fit:cover; transition:0.3s; }
+.nav-profile img:hover { transform:scale(1.1); box-shadow:0 0 15px rgba(255,0,255,0.4); }
+
+/* --- Settings Card --- */
+.settings-card { background:#1a2238; width:100%; max-width:440px; border-radius:25px; padding:25px; box-shadow:0 10px 25px rgba(0,0,0,0.2); color:white; margin:20px 0; }
+.profile-section { display:flex; align-items:center; gap:15px; margin-bottom:20px; }
+.profile-section img { width:60px; height:60px; border-radius:50%; border:2px solid #FF00FF; object-fit:cover; }
+.profile-section .name { font-size:18px; font-weight:bold; }
+.settings-title { text-align:center; font-size:22px; margin-bottom:20px; }
+.setting-item { background:rgba(255,255,255,0.05); margin-bottom:12px; padding:15px; border-radius:15px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; }
+.switch { position:relative; display:inline-block; width:46px; height:24px; }
+.switch input { opacity:0; width:0; height:0; }
+.slider { position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0; background:#34495e; transition:.4s; border-radius:34px; }
+.slider:before { content:""; position:absolute; height:18px; width:18px; left:3px; bottom:3px; background:white; border-radius:50%; transition:.4s; }
+input:checked + .slider { background:#3B82F6; }
+.green-switch input:checked + .slider { background:#4ADE80; }
+input:checked + .slider:before { transform:translateX(22px); }
+.save-btn { width:100%; padding:14px; margin-top:20px; border:none; border-radius:12px; background:linear-gradient(135deg,#6C5CE7,#FF00FF); cursor:pointer; color:white; font-weight:bold; }
+.save-btn:hover { transform:scale(1.05); }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">CodeCraft</a>
+    <div class="nav-content-wrapper">
+      <div class="nav-capsule">
+        <a href="home.html">home</a>
+        <a href="course browsing.html">courses</a>
+        <a href="contact us.html">contact us</a>
+        <a href="about us.html">about us</a>
+      </div>
+      <div class="nav-profile">
+        <a href="profile.html">
+          <img id="navUserImg" src="https://i.pravatar.cc/150" alt="Profile">
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Settings Card -->
+<div class="settings-card">
+  <div class="profile-section">
+    <img id="profilePreview" src="" alt="Profile Picture">
+    <div class="name" id="studentName">Student Name</div>
+  </div>
+
+  <div class="settings-title">Settings</div>
+
+  <div class="setting-item">
+    <span>Change Password</span>
+    <i class="fas fa-chevron-right"></i>
+  </div>
+
+  <div class="setting-item">
+    <span>Change Profile Picture</span>
+    <input type="file" id="profileInput" accept="image/*">
+  </div>
+
+  <div class="setting-item">
+    <span>Dark Mode</span>
+    <label class="switch"><input type="checkbox" id="darkModeToggle"><span class="slider"></span></label>
+  </div>
+
+  <div class="setting-item">
+    <span>Email Notifications</span>
+    <label class="switch green-switch"><input type="checkbox" id="emailNotif"><span class="slider"></span></label>
+  </div>
+
+  <div class="setting-item">
+    <span>Push Notifications</span>
+    <label class="switch green-switch"><input type="checkbox" id="pushNotif"><span class="slider"></span></label>
+  </div>
+
+  <button class="save-btn" id="saveBtn">Save Changes</button>
+</div>
+
+<script>
+// Load profile info from localStorage
+const profileInput = document.getElementById('profileInput');
+const profilePreview = document.getElementById('profilePreview');
+const studentName = document.getElementById('studentName');
+const navUserImg = document.getElementById('navUserImg');
+
+window.addEventListener('load', ()=>{
+    const pic = localStorage.getItem('profilePic') || '';
+    profilePreview.src = pic;
+    navUserImg.src = pic || 'https://i.pravatar.cc/150';
+    studentName.textContent = localStorage.getItem('studentName') || 'Student Name';
+
+    const dark = localStorage.getItem('darkMode')==='true';
+    document.getElementById('darkModeToggle').checked = dark;
+    document.body.style.backgroundColor = dark?'#121212':'#F8F9FF';
+
+    document.getElementById('emailNotif').checked = localStorage.getItem('emailNotif')==='true';
+    document.getElementById('pushNotif').checked = localStorage.getItem('pushNotif')==='true';
+});
+
+// Update profile picture
+profileInput.addEventListener('change', e=>{
+    const file = e.target.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = ()=> {
+            profilePreview.src = reader.result;
+            navUserImg.src = reader.result;
+            localStorage.setItem('profilePic', reader.result);
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+// Dark Mode toggle
+document.getElementById('darkModeToggle').addEventListener('change', e=>{
+    document.body.style.backgroundColor = e.target.checked?'#121212':'#F8F9FF';
+    localStorage.setItem('darkMode', e.target.checked);
+});
+
+// Notifications toggles
+['emailNotif','pushNotif'].forEach(id=>{
+    document.getElementById(id).addEventListener('change', e=>{
+        localStorage.setItem(id, e.target.checked);
+    });
+});
+
+// Save button
+document.getElementById('saveBtn').addEventListener('click', ()=>{
+    alert('Settings Saved ✅');
+});
+</script>
+
+</body>
+</html>

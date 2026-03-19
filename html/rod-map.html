@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rod - map - codecraft</title>
+  <meta name="description" content="rod map for all programing track" />
+  <link rel="stylesheet" href="../style/rod-map.css" />
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+  <div class="nav-container">
+
+    <a href="#" class="logo">CodeCraft</a>
+
+    <div class="nav-capsule">
+      <a href="home.html">home</a>
+      <a href="course browsing.html">courses</a>
+      <a href="contact us.html">contact us</a>
+      <a href="about us.html">About us</a>
+    </div>
+
+  </div>
+</nav>
+  </header>
+  <main>
+    <div class="sid-minu">
+      <div class="track">
+        <button onclick="to_front()">frontend</button>
+      </div>
+      <div class="track">
+        <button onclick="to_backend()">backend</button>
+      </div>
+      <div class="track">
+        <button onclick="to_database()">database</button>
+      </div>
+      <div class="track">
+        <button onclick="to_fulltask()">fulltask</button>
+      </div>
+      <div class="track">
+        <button onclick="to_ai()">ai</button>
+      </div>
+      <div class="track">
+        <button onclick="to_securte()">securte</button>
+      </div>
+      <div class="track">
+        <button onclick="to_network()">network</button>
+      </div>
+      <div class="track">
+        <button onclick="to_os()">opreatent system</button>
+      </div>
+      <div class="track">
+        <button onclick="to_cloud()">cloud</button>
+      </div>
+      <div class="track">
+        <button onclick="to_mobileapp()">mobile app</button>
+      </div>
+    </div>
+    <div class="rod">
+      <h1>start & learn & buld</h1>
+
+      <div id="front" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Fundamentals</h2>
+          <p>Master HTML5 semantic tags and modern CSS3 layouts like Flexbox and Grid.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>JavaScript</h2>
+          <p>Learn ES6+, DOM manipulation, and asynchronous programming with Fetch API.
+          </p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Frameworks</h2>
+          <p>Deep dive into React.js or Vue.js to build powerful component-based UIs.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>State Management</h2>
+          <p>Handle complex app data using Redux, Toolkit, or Context API.</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Build Tools</h2>
+          <p>Learn Vite, Webpack, and NPM to manage your project dependencies.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Deployment</h2>
+          <p>Launch your projects to the world using Vercel, Netlify, or GitHub Pages.</p>
+        </div>
+      </div>
+
+      <div id="back" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Server Languages</h2>
+          <p>Master a backend language like Node.js, Python, or Go for server logic.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>RESTful APIs</h2>
+          <p>Learn to design and build secure APIs to communicate with the frontend.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Authentication</h2>
+          <p>Implement secure login systems using JWT (JSON Web Tokens) and OAuth.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Database Integration</h2>
+          <p>Connect your server to databases and handle CRUD operations efficiently.</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Testing</h2>
+          <p>Write Unit and Integration tests to ensure your backend code is reliable.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Docker</h2>
+          <p>Containerize your app to ensure it runs consistently in any environment.</p>
+        </div>
+      </div>
+
+      <div id="database" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>SQL (Relational)</h2>
+          <p>Master MySQL or PostgreSQL. Learn about joins, indexes, and ACID.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>NoSQL (Flexible)</h2>
+          <p>Explore MongoDB or Firebase for handling unstructured, document-based data.
+          </p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Schema Design</h2>
+          <p>Learn Data Modeling and Normalization to build efficient architectures.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>ORM / ODM</h2>
+          <p>Use tools like Prisma, Mongoose, or Sequelize to interact with DBs via code.
+          </p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Caching</h2>
+          <p>Improve performance by storing frequent data in Redis or Memcached.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Data Security</h2>
+          <p>Learn about encryption at rest, backups, and preventing SQL Injection.</p>
+        </div>
+      </div>
+
+      <div id="fulltask" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Frontend-Backend Sync</h2>
+          <p>Learn how to connect a React frontend with a Node.js/Express backend.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>MERN Stack</h2>
+          <p>Build complete apps using MongoDB, Express, React, and Node.js.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>State Persistence</h2>
+          <p>Manage user sessions and data across the entire stack seamlessly.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Real-time Features</h2>
+          <p>Implement live chats and notifications using WebSockets (Socket.io).</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Full Cycle Dev</h2>
+          <p>Handle everything from UI design to DB management and production.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Serverless</h2>
+          <p>Explore full-stack frameworks like Next.js for SSR and serverless APIs.</p>
+        </div>
+      </div>
+
+      <div id="ai" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Python for AI</h2>
+          <p>Master Python libraries like NumPy and Pandas for data manipulation.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>Mathematics</h2>
+          <p>Focus on Linear Algebra, Calculus, and Statistics for data science.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Machine Learning</h2>
+          <p>Learn supervised and unsupervised learning using Scikit-Learn.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Deep Learning</h2>
+          <p>Build Neural Networks using frameworks like TensorFlow or PyTorch.</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Natural Language (NLP)</h2>
+          <p>Learn how AI processes text using GPT models and LLM basics.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Computer Vision</h2>
+          <p>Master image processing and object detection using OpenCV.</p>
+        </div>
+      </div>
+
+      <div id="securty" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Networking Basics</h2>
+          <p>Understand TCP/IP, DNS, and the OSI Model to secure data flow.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>Kali Linux Mastery</h2>
+          <p>Learn advanced command-line tools for penetration testing.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Web Hacking (Pentest)</h2>
+          <p>Identify OWASP Top 10 vulnerabilities like SQLi, XSS, and CSRF.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Cryptography</h2>
+          <p>Understand encryption, hashing, and digital signatures for data privacy.</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Ethical Hacking</h2>
+          <p>Practice scanning, reconnaissance, and gaining access in lab environments.
+          </p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Security Auditing</h2>
+          <p>Learn how to detect attacks and recover from system compromises.</p>
+        </div>
+      </div>
+
+      <div id="network" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Protocol Stack</h2>
+          <p>Study HTTP/S, FTP, SSH, and DHCP protocols in depth.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>Routing & Switching</h2>
+          <p>Learn to configure network hardware to manage enterprise traffic.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>IP Addressing</h2>
+          <p>Master IPv4/IPv6 subnetting and public/private address management.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Firewalls & IDS</h2>
+          <p>Protect network perimeters using firewalls and intrusion detection systems.
+          </p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>VPN & Tunneling</h2>
+          <p>Understand how to create secure remote connections across the web.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Wireless Security</h2>
+          <p>Learn about Wi-Fi standards (802.11) and WPA2/WPA3 protocols.</p>
+        </div>
+      </div>
+
+      <div id="os" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Kernel & Processes</h2>
+          <p>Understand how the OS manages CPU, RAM, and system resources.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>Linux Administration</h2>
+          <p>Master user permissions, file systems, and server management.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Windows Internals</h2>
+          <p>Learn about Active Directory, Group Policy, and Registry management.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Virtualization</h2>
+          <p>Manage virtual machines using VMware, VirtualBox, or KVM.</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Bash & Scripting</h2>
+          <p>Automate system tasks using Bash (Linux) or PowerShell (Windows).</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>System Security</h2>
+          <p>Learn patch management and hardening techniques for OS security.</p>
+        </div>
+      </div>
+
+      <div id="cloud" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Cloud Providers</h2>
+          <p>Get started with AWS, Microsoft Azure, or Google Cloud (GCP).</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>Object Storage</h2>
+          <p>Learn to manage cloud assets using S3 buckets or Blob storage.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Virtual Servers</h2>
+          <p>Master EC2 instances and auto-scaling to handle web traffic.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Serverless (Lambda)</h2>
+          <p>Build and run applications without managing underlying infrastructure.</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Identity (IAM)</h2>
+          <p>Manage users and permissions to secure cloud resources.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>Infrastructure as Code</h2>
+          <p>Automate cloud setup using tools like Terraform or CloudFormation.</p>
+        </div>
+      </div>
+
+      <div id="mobileapp" class="map">
+        <div class="rod-cardx rod-card-r1">
+          <h2>Flutter & Dart</h2>
+          <p>Build beautiful cross-platform apps for iOS and Android with one code.</p>
+        </div>
+        <div class="rod-cardx rod-card-l1">
+          <h2>React Native</h2>
+          <p>Leverage JavaScript skills to create native-performing mobile apps.</p>
+        </div>
+        <div class="rod-cardx rod-card-r2">
+          <h2>Native Development</h2>
+          <p>Master Kotlin (Android) or Swift (iOS) for high-performance apps.</p>
+        </div>
+        <div class="rod-cardx rod-card-l2">
+          <h2>Mobile UI/UX</h2>
+          <p>Design apps following Material Design and Apple HIG guidelines.</p>
+        </div>
+        <div class="rod-cardx rod-card-r3">
+          <h2>Mobile APIs</h2>
+          <p>Interact with hardware: GPS, Camera, Biometrics, and Push Notifications.</p>
+        </div>
+        <div class="rod-cardx rod-card-l3">
+          <h2>App Store Launch</h2>
+          <p>Learn the process to publish apps on Google Play and Apple App Store.</p>
+        </div>
+      </div>
+
+  </main>
+  <footer>
+
+    <div class="afooter">
+      <div class="footer-container">
+
+        <div class="footer-col brand-col">
+          <div>
+            <!-- <img src="YOUR_LOGO_URL" alt="Logo"> -->
+             <a href="#" class="logo">CodeCraft</a>
+          </div> 
+           
+          <h3>CODECRAFT is a constant success story in software and software development.</h3>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact Us</h5>
+
+          <div class="contact-list">
+
+            <a href="https://wa.me/201226755077" target="_blank">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+
+            <a href="tel:+201226755077">
+              <i class="fas fa-phone"></i> Call Us
+            </a>
+
+            <a href="mailto:marwamohamed254@gmail.com">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+
+            <a href="https://github.com/YOUR_USERNAME" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Send Message</h5>
+
+          <form class="contact-form">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+       <div class="footer-bottom">
+        Copyright © 2026 CODECRAFT. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+  <script src="../script/rod-map.js"></script>
+</body>
+
+</html>
