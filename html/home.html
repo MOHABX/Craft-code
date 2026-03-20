@@ -15,14 +15,14 @@
 
 <div class="nav-container">
 
-<a href="#" class="logo">CodeCraft</a>
+<a href="../html/home.html" class="logo">CodeCraft</a>
 
 <div class="nav-capsule">
 <a href="#home">Home</a>
-<a href="#track">Courses</a>
-<a href="#st-revue">Instructors</a>
+<!-- <a href="#track">Courses</a> -->
+<a href="#track">Learning path</a>
 <a href="../html/contact html.html">Contact</a>
-<a href="../html/about.html">About Us</a>
+<a href="#about">About Us</a>
 </div>
 
 <div class="nav-buttons">
@@ -38,8 +38,8 @@
  <section class="hero" id="home">
         <div class="hero-content">
             <h1>Craft Your <span>Future</span> with Code.</h1>
-            <form class="search-box">
-                <input type="search" placeholder="What do you want to learn?">
+            <form class="search-box" id="searchbox">
+                <input type="search" id="searchInput" placeholder="What do you want to learn?">
                 <button type="submit">Search</button>
             </form>
         </div>
@@ -236,7 +236,7 @@
     </div>
 </center>
   
-        <!-- حسن            -->
+        <!-- حسن -->
     <section class="hassan" id="about">
         <div class="container">
         <h1>Why Craft Code?</h1>
@@ -293,7 +293,7 @@
 <div class="footer-col">
 <h5>Resources</h5>
 <ul>
-<li><a href="#">FAQs</a></li>
+<li><a href="../html/FAQS.html">FAQs</a></li>
 <li><a href="#">Terms</a></li>
 <li><a href="#">Privacy Policy</a></li>
 <li><a href="#">Support</a></li>
@@ -330,7 +330,43 @@ Copyright © 2023 CODECRAFT. All rights reserved.
 </div>
 
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("searchbox");
+    const input = document.getElementById("searchInput");
 
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
 
+        const value = input.value.toLowerCase().trim();
+
+        if (value === "") return;
+
+        // الربط مع الـ IDs الموجودة في صفحتك
+        if (value.includes("track") || value.includes("مسار") || value.includes("course") || value.includes("كورس")) {
+            scrollToSection("track"); // هذا يطابق id="track" في الكود لديك
+        } 
+        else if (value.includes("start") || value.includes("ابدأ") || value.includes("journey")) {
+            scrollToSection("start-learn"); // هذا يطابق id="start-learn"
+        } 
+        else if (value.includes("about") || value.includes("عن") || value.includes("why")) {
+            scrollToSection("about"); // هذا يطابق id="about"
+        }
+        else if (value.includes("contact") || value.includes("تواصل")) {
+            scrollToSection("contact"); // هذا يطابق id="contact" في الفوتر
+        }
+        else {
+            alert(`عذراً، لم نجد قسماً يتعلق بـ "${value}". جرب البحث عن 'مسارات' أو 'ابدأ'.`);
+        }
+    });
+
+    function scrollToSection(id) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+});
+</script>
 </body>
 </html>

@@ -5,259 +5,517 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lesson Player - Neon Mode</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
-/* ----------------- Body ----------------- */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0F0C29; /* Deep Space */
-    color: #fff;
+
+/* ---------------- Body ---------------- */
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#F8F9FF;
+color:#0F0C29;
 }
 
-/* ----------------- Title ----------------- */
-.title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    padding: 20px;
-    color: #fff;
-    text-shadow: 0 0 10px #6C5CE7;
+/* ================= Navbar ================= */
+/* Navbar */
+ .navbar{
+  width:100%;
+  background:#0F0C29;
+  position: relative;
+  top:0;
+  left:0;
+  z-index:1000;
 }
 
-/* ----------------- Layout ----------------- */
-.container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
+.nav-container{
+  max-width:1300px;
+  margin:auto;
+  padding:22px 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-/* ----------------- Sidebar ----------------- */
-.sidebar {
-    width: 280px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 20px rgba(108, 92, 231, 0.1);
-    color: #000;
+.logo{
+  font-size:28px;
+  font-weight:800;
+  background:linear-gradient(90deg,#6C5CE7,#FF00FF);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-decoration:none;
 }
 
-.sidebar h3 {
-    text-align: center;
-    margin-bottom: 15px;
-    color: #6C5CE7;
+.nav-capsule{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  padding:14px 30px;
+  border:2px solid #6C5CE7;
+  border-radius:50px;
+  margin-right: 350px;
 }
 
-.lesson {
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
+.nav-capsule a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:16px;
+  transition:0.3s;
 }
 
-.lesson:hover {
-    background: rgba(108, 92, 231, 0.05);
+.nav-capsule a:hover{
+  color:#FF00FF;
 }
 
-.lesson.active {
-    background: rgba(108, 92, 231, 0.08);
-    border-right: 4px solid #00F2FE; /* Neon Cyan */
-    color: #6C5CE7;
-    font-weight: bold;
+
+
+
+/* ---------------- Title ---------------- */
+
+.title{
+text-align:center;
+font-size:32px;
+font-weight:bold;
+padding:20px;
+text-shadow:0 0 10px #6C5CE7;
 }
 
-/* Completed check mark */
-.lesson.completed::after {
-    content: '✔';
-    position: absolute;
-    right: 10px;
-    color: #00F2FE;
+/* ---------------- Layout ---------------- */
+
+.container{
+display:flex;
+gap:20px;
+padding:20px;
 }
 
-/* ----------------- Content ----------------- */
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* ---------------- Sidebar ---------------- */
+
+.sidebar{
+width:280px;
+background:#0F0C29;
+border-radius:10px;
+padding:15px;
+color:#FFF;
 }
 
-/* ----------------- Video ----------------- */
-.video {
-    background: #0F0C29;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 0 20px rgba(108, 92, 231, 0.2);
+.sidebar h3{
+text-align:center;
+margin-bottom:15px;
+color:#6C5CE7;
 }
 
-.video video {
-    width: 100%;
-    height: 350px;
-    border-radius: 12px;
-    object-fit: cover;
+.lesson{
+padding:12px;
+border-radius:8px;
+margin-bottom:10px;
+cursor:pointer;
+position:relative;
 }
 
-/* ----------------- Instructor ----------------- */
-.instructor {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(108, 92, 231, 0.2);
+.lesson:hover{
+background:rgba(108,92,231,0.05);
 }
 
-.instructor img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.lesson.active{
+background:rgba(108,92,231,0.08);
+border-right:4px solid #00F2FE;
+color:#6C5CE7;
+font-weight:bold;
 }
 
-.stars {
-    color: #FFDD00;
-    text-shadow: 0 0 5px #FFDD00;
+.lesson.completed::after{
+content:'✔';
+position:absolute;
+right:10px;
+color:#00F2FE;
 }
 
-/* ----------------- Requirements ----------------- */
-.requirements {
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(108, 92, 231, 0.2);
+/* ---------------- Content ---------------- */
+
+.content{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:20px;
 }
 
-.req {
-    background: rgba(108, 92, 231, 0.1);
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 8px;
-    color: #fff;
+/* video */
+
+.video{
+background:#FFFFFF;
+border-radius:12px;
+padding:10px;
 }
 
-/* ----------------- Comments ----------------- */
-.comments {
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(108, 92, 231, 0.2);
+.video video{
+width:100%;
+height:350px;
+border-radius:12px;
+object-fit:cover;
 }
 
-.comment {
-    margin-top: 10px;
-    padding: 10px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 6px;
+/* instructor */
+
+.instructor{
+background:rgba(108,92,231,0.2);
+padding:15px;
+border-radius:1px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-/* ----------------- Next Button ----------------- */
-.next {
-    text-align: right;
+.instructor img{
+width:50px;
+height:50px;
+border-radius:50%;
 }
 
-.next button {
-    background: linear-gradient(135deg, #6C5CE7, #FF00FF);
-    color: #fff;
-    border: none;
-    box-shadow: 0 4px 15px rgba(255, 0, 255, 0.3);
-    border-radius: 8px;
-    padding: 12px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: 600;
+.stars{
+color:#FFDD00;
 }
 
-.next button:hover {
-    box-shadow: 0 0 25px rgba(255,0,255,0.5);
+/* requirements */
+
+.requirements{
+background:rgba(255,255,255,0.05);
+padding:15px;
+border-radius:10px;
 }
 
-/* ----------------- Neon Tabs Example ----------------- */
-.tabs {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+.req{
+background:rgba(108,92,231,0.1);
+padding:10px;
+margin:8px 0;
+border-radius:8px;
 }
 
-.tab {
-    padding: 8px 15px;
-    cursor: pointer;
-    color: #636E72;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
+/* comments */
+
+.comments{
+background:rgba(255,255,255,0.05);
+padding:15px;
+border-radius:10px;
 }
 
-.tab.active {
-    border-image: linear-gradient(to right, #6C5CE7, #FF00FF) 1;
-    border-bottom: 3px solid;
-    color: #fff;
+.comment{
+margin-top:10px;
+padding:10px;
+background:rgba(255,255,255,0.08);
+border-radius:6px;
+}
+
+/* next button */
+
+.next{
+text-align:right;
+}
+
+.next button{
+background:linear-gradient(135deg,#6C5CE7,#FF00FF);
+color:#fff;
+border:none;
+border-radius:8px;
+padding:12px 25px;
+font-size:16px;
+cursor:pointer;
+}
+
+
+/* ================= Footer ================= */
+.footer{
+background:#1A1642;
+color:#FFFFFF;
+padding:80px 0 40px;
+margin-top: 50px;
+}
+
+.footer-container{
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+padding:0 40px;
+flex-wrap:wrap;
+}
+
+.footer-col{
+margin-bottom:40px;
+min-width:200px;
+}
+
+.brand-col{
+flex:1.5;
+}
+
+.brand-col h3{
+font-size:30px;
+line-height:1.4;
+font-weight:600;
+max-width:450px;
+}
+
+.logo img{
+height:130px;
+margin-bottom:25px;
+}
+
+.footer h5{
+font-size:24px;
+margin-bottom:25px;
+font-weight:800;
+text-transform:uppercase;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer ul li{
+margin-bottom:15px;
+}
+
+.footer ul li a{
+color:rgba(255,255,255,0.8);
+text-decoration:none;
+font-size:20px;
+transition:0.3s;
+}
+
+.footer ul li a:hover{
+color:#FF00FF;
+text-shadow:0 0 10px rgba(255,0,255,0.5);
+}
+
+.contact-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.contact-list a{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:20px;
+text-decoration:none;
+color:#FFFFFF;
+transition:0.3s;
+}
+
+.contact-list a i{
+font-size:24px;
+width:28px;
+}
+
+.fa-whatsapp{color:#25D366;}
+.fa-github{color:#6C5CE7;}
+.fa-envelope{color:#FF00FF;}
+
+.contact-list a:hover{
+color:#FF00FF;
+transform:translateX(6px);
+text-shadow:0 0 12px rgba(255,0,255,0.6);
+}
+
+.footer-bottom{
+border-top:1px solid rgba(108,92,231,0.2);
+margin-top:40px;
+padding-top:20px;
+text-align:center;
+font-size:16px;
+color:#ccc;
+}
+
+@media(max-width:992px){
+
+.footer-container{
+flex-direction:column;
+text-align:center;
+}
+
+.contact-list{
+align-items:center;
+}
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- Navbar -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<a href="../html/home.html" class="logo">CodeCraft</a>
+
+<div class="nav-capsule">
+<a href="../html/browse courses.html">Courses</a>
+<a href="../html/track.html">Learning Path</a>
+<a href="../html/FAQS.html">FaQ</a>
+<a href="../html/contact html.html.html">Contact</a>
+<a href="../html/about.html">About</a>
+</div>
+
+</div>
+
+<div class="nav-line"></div>
+
+</nav>
+
 <div class="title">Lesson Player</div>
 
 <div class="container">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h3>Course Lessons</h3>
-        <div class="lesson active">Introduction to Programming</div>
-        <div class="lesson completed">Programming Basics</div>
-        <div class="lesson">Variables</div>
-        <div class="lesson">Loops</div>
-        <div class="lesson">Functions</div>
-        <div class="lesson">Arrays</div>
-        <div class="lesson">Final Project</div>
-    </div>
+<div class="sidebar">
+<h3>Course Lessons</h3>
 
-    <!-- Content -->
-    <div class="content">
-
-        <!-- Video -->
-        <div class="video">
-            <video controls>
-                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <!-- Instructor -->
-        <div class="instructor">
-            <div>
-                <b>John Doe</b><br>
-                Senior Programming Instructor
-            </div>
-            <div class="stars">★★★★★</div>
-            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&h=100&w=100" alt="Instructor">
-        </div>
-
-        <!-- Requirements -->
-        <div class="requirements">
-            <h3>Course Requirements</h3>
-            <div class="req">✔ Basic computer knowledge</div>
-            <div class="req">✔ A laptop or PC</div>
-            <div class="req">✔ Passion for learning programming</div>
-        </div>
-
-        <!-- Comments -->
-        <div class="comments">
-            <h3>Student Comments</h3>
-            <div class="comment">Great programming lesson!</div>
-            <div class="comment">Very helpful explanation.</div>
-            <div class="comment">Waiting for the next lesson.</div>
-        </div>
-
-        <!-- Next Lesson -->
-        <div class="next">
-            <button class="next-lesson-btn">Next Lesson</button>
-        </div>
-
-    </div>
+<div class="lesson active">Introduction to Programming</div>
+<div class="lesson completed">Programming Basics</div>
+<div class="lesson">Variables</div>
+<div class="lesson">Loops</div>
+<div class="lesson">Functions</div>
+<div class="lesson">Arrays</div>
+<div class="lesson">Final Project</div>
 
 </div>
+
+<div class="content">
+
+<div class="video">
+<video controls>
+<source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="instructor">
+
+<div>
+<b>John Doe</b><br>
+Senior Programming Instructor
+</div>
+
+<div class="stars">★★★★★</div>
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?crop=faces&fit=crop&h=100&w=100">
+
+</div>
+
+<div class="requirements">
+
+<h3>Course Requirements</h3>
+
+<div class="req">✔ Basic computer knowledge</div>
+<div class="req">✔ A laptop or PC</div>
+<div class="req">✔ Passion for learning programming</div>
+
+</div>
+
+<div class="comments">
+
+<h3>Student Comments</h3>
+
+<div class="comment">Great programming lesson!</div>
+<div class="comment">Very helpful explanation.</div>
+<div class="comment">Waiting for the next lesson.</div>
+
+</div>
+
+<div class="next">
+<button>Next Lesson</button>
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col brand-col">
+<div class="logo">
+<img src="../img/logo.png" alt="Logo">
+</div>
+<h3>CODECRAFT is a constant success story in software and software development.</h3>
+</div>
+
+<div class="footer-col">
+<h5>Quick Links</h5>
+<ul>
+<li><a href="../html/home.html">Home</a></li>
+<li><a href="../html/browse courses.html">courses</a></li>
+<li><a href="../html/services.html">Services</a></li>
+<li><a href="../html/contact html.html">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Resources</h5>
+<ul>
+<li><a href="../html/FAQS.html">FAQs</a></li>
+<li><a href="../html/terms.html">Terms</a></li>
+<li><a href="../html/privacy.html">Privacy Policy</a></li>
+<li><a href="../html/support.html">Support</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Contact Us</h5>
+
+<div class="contact-list">
+
+<a href="https://wa.me/201150726374" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+<a href="https://github.com/YOUR_USERNAME" target="_blank">
+<i class="fab fa-github"></i>
+GitHub
+</a>
+
+<a href="mailto:marwamohamed254@gmail.com">
+<i class="fas fa-envelope"></i>
+Email
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+Copyright © 2026 CODECRAFT. All rights reserved.
+</div>
+
+</footer>
+
+
+<script>
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(question => {
+
+question.addEventListener("click", () => {
+
+const card = question.parentElement;
+
+card.classList.toggle("active");
+
+});
+
+});
+
+</script>
+
 
 </body>
 </html>

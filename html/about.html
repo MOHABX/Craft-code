@@ -1,142 +1,540 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - CodeCraft</title>
-    <link rel="stylesheet" href="../style/about.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About CodeCraft</title>
+
+<style>
+    /* ======================= Navbar ======================= */
+.navbar{
+width:100%;
+background:#0F0C29;
+}
+
+.nav-container{
+max-width:1300px;
+margin:auto;
+padding:22px 70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+background:linear-gradient(90deg,#6C5CE7,#FF00FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-decoration:none;
+}
+
+.nav-capsule{
+display:flex;
+align-items:center;
+gap:38px;
+padding:14px 40px;
+border:2px solid #6C5CE7;
+border-radius:50px;
+white-space:nowrap;
+}
+
+.nav-capsule a{
+color:#FFFFFF;
+text-decoration:none;
+font-weight:600;
+font-size:18px;
+transition:0.3s;
+}
+
+.nav-capsule a:hover{
+color:#FF00FF;
+}
+
+.nav-buttons{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.login-btn{
+padding:10px 26px;
+border:none;
+border-radius:10px;
+font-weight:600;
+font-size:16px;
+color:#fff;
+cursor:pointer;
+background:linear-gradient(90deg,#6C5CE7,#FF00FF);
+}
+
+.signup-btn{
+padding:10px 28px;
+border-radius:10px;
+font-weight:600;
+font-size:16px;
+color:#0F0C29;
+background:#E0D4FF;
+border:none;
+cursor:pointer;
+box-shadow:0 4px 14px rgba(108,92,231,0.35);
+transition:0.3s;
+}
+
+.signup-btn:hover{
+background:#d4c4ff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Tahoma, sans-serif;
+}
+
+body{
+background:#F5F7FF;
+color:#555555;
+}
+
+/* HERO */
+
+.about-hero{
+text-align:center;
+padding:100px 20px 70px;
+}
+
+.about-hero h1{
+font-size:48px;
+color:#1A1642;
+margin-bottom:20px;
+}
+
+.about-hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+/* STORY */
+
+.about-story{
+background:#FFFFFF;
+padding:80px 40px;
+}
+
+.story-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.story-image img{
+width:420px;
+border-radius:12px;
+}
+
+.story-text{
+flex:1;
+}
+
+.story-text h2{
+font-size:36px;
+color:#1A1642;
+margin-bottom:20px;
+}
+
+.story-text p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:15px;
+}
+
+/* MISSION */
+
+.mission{
+background:#F5F7FF;
+text-align:center;
+padding:80px 20px;
+}
+
+.mission h2{
+font-size:36px;
+color:#1A1642;
+margin-bottom:20px;
+}
+
+.mission p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+/* TEAM */
+
+.team{
+background:#FFFFFF;
+padding:80px 20px;
+text-align:center;
+}
+
+.team h2{
+font-size:36px;
+color:#1A1642;
+margin-bottom:50px;
+}
+
+.team-container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.team-card{
+background:#F5F7FF;
+padding:30px;
+border-radius:14px;
+width:220px;
+transition:0.3s;
+border:1px solid #E0E3FF;
+}
+
+.team-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(108,92,231,0.25);
+}
+
+.team-card img{
+width:100px;
+border-radius:50%;
+margin-bottom:15px;
+border:3px solid #6C5CE7;
+}
+
+.team-card h4{
+color:#1A1642;
+margin-bottom:5px;
+}
+
+.team-card p{
+font-size:14px;
+}
+
+/* BUTTON */
+
+.about-btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 28px;
+background:#6C5CE7;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:16px;
+transition:0.3s;
+}
+
+.about-btn:hover{
+background:#FF00FF;
+}
+.footer{
+background:#1A1642;
+color:#FFFFFF;
+padding:80px 0 40px;
+}
+
+.footer-container{
+max-width:1300px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+padding:0 40px;
+flex-wrap:wrap;
+}
+
+.footer-col{
+margin-bottom:40px;
+min-width:200px;
+}
+
+.brand-col{
+flex:1.5;
+}
+
+.brand-col h3{
+font-size:30px;
+line-height:1.4;
+font-weight:600;
+max-width:450px;
+}
+
+.logo img{
+height:130px;
+margin-bottom:25px;
+}
+
+.footer h5{
+font-size:24px;
+margin-bottom:25px;
+font-weight:800;
+text-transform:uppercase;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer ul li{
+margin-bottom:15px;
+}
+
+.footer ul li a{
+color:rgba(255,255,255,0.8);
+text-decoration:none;
+font-size:20px;
+transition:0.3s;
+}
+
+.footer ul li a:hover{
+color:#FF00FF;
+text-shadow:0 0 10px rgba(255,0,255,0.5);
+}
+
+.contact-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.contact-list a{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:20px;
+text-decoration:none;
+color:#FFFFFF;
+transition:0.3s;
+}
+
+.contact-list a i{
+font-size:24px;
+width:28px;
+}
+
+.fa-whatsapp{color:#25D366;}
+.fa-github{color:#6C5CE7;}
+.fa-envelope{color:#FF00FF;}
+
+.contact-list a:hover{
+color:#FF00FF;
+transform:translateX(6px);
+text-shadow:0 0 12px rgba(255,0,255,0.6);
+}
+
+.footer-bottom{
+border-top:1px solid rgba(108,92,231,0.2);
+margin-top:40px;
+padding-top:20px;
+text-align:center;
+font-size:16px;
+color:#ccc;
+}
+
+@media(max-width:992px){
+
+.footer-container{
+flex-direction:column;
+text-align:center;
+}
+
+.contact-list{
+align-items:center;
+}
+
+}
+
+
+</style>
+
 </head>
 <body>
+<!-- Navbar -->
+<nav class="navbar">
+<div class="nav-container">
+<a href="#" class="logo">CodeCraft</a>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">CodeCraft</a>
-            <div class="nav-capsule">
-                <a href="#home">Home</a>
-                <a href="#track">Courses</a>
-                <a href="#st-revue">Instructors</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About Us</a>
-            </div>
-            <div class="nav-buttons">
-                <a href="./login.html"><button class="login-btn">Login</button></a>
-                <a href="./signup.html"><button class="signup-btn">Sign Up</button></a>
-            </div>
-        </div>
-    </nav>
+<div class="nav-capsule">
+<a href="../html/home.html">Home</a>
+<a href="../html/browse courses.html">Courses</a>
+<a href="../html/dr-dInstructor.html">Instructors</a>
+<a href="../html/contact html.html">Contact</a>
+<a href="../html/about.html">About Us</a>
+</div>
 
-    <header class="page-header">
-        <h1>About Us & Our Team</h1>
-        <p>Discover our journey, vision, and what our students say about us.</p>
-    </header>
+<div class="nav-buttons">
+<button class="login-btn">Login</button>
+<button class="signup-btn">Sign Up</button>
+</div>
+</div>
+</nav>
 
-    <div class="container">
-        
-        <section class="about-vision" id="about">
-            <div class="card about-card">
-                <h3>About the Platform</h3>
-                <p>We are a leading educational platform dedicated to empowering young minds by providing high-quality content in technology and artificial intelligence, delivered in a simplified and interactive way.</p>
-            </div>
-            <div class="card vision-card">
-                <h3>Our Vision</h3>
-                <p>We aim to be the first global reference for digital self-learning, bridging the gap between academic education and the evolving tech job market.</p>
-            </div>
-        </section>
+<!-- HERO -->
 
-        <hr class="separator">
+<section class="about-hero">
 
-        <section class="team-section">
-            <h2 class="section-title">Meet Our Team</h2>
-            <div class="team-grid">
-                <div class="team-card">
-                    <img src="https://via.placeholder.com/100" alt="Team Member">
-                    <h4>Ahmed Mohamed</h4>
-                    <p>Frontend Developer</p>
-                </div>
-                <div class="team-card">
-                    <img src="https://via.placeholder.com/100" alt="Team Member">
-                    <h4>Sarah Ali</h4>
-                    <p>UX/UI Designer</p>
-                </div>
-                <div class="team-card">
-                    <img src="https://via.placeholder.com/100" alt="Team Member">
-                    <h4>Yassin Hassan</h4>
-                    <p>AI Specialist</p>
-                </div>
-            </div>
-        </section>
+<h1>About CodeCraft</h1>
 
-        <hr class="separator">
+<p>
+CodeCraft is a creative software development platform focused on building
+modern digital solutions for developers and businesses.
+</p>
 
-        <section class="testimonials-section" id="st-revue">
-            <h2 class="section-title">Student Reviews</h2>
-            <div class="testimonials-grid">
-                <div class="test-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The best platform I've ever studied on. The content is very organized and the practical application made a huge difference."</p>
-                    <h5>- Omar Khaled</h5>
-                </div>
-                <div class="test-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"The instructors' explanations are simple and the platform is very user-friendly."</p>
-                    <h5>- Lina Ahmed</h5>
-                </div>
-            </div>
-        </section>
+<a class="about-btn" href="#story">Learn More</a>
 
-    </div>
+</section>
 
-    <footer class="footer" id="contact">
-        <div class="footer-container">
-            <div class="footer-col brand-col">
-                <div class="logo">
-                    <img src="../img/logo.png" alt="Logo">
-                </div>
-                <h3>CODECRAFT is a constant success story in software and software development.</h3>
-            </div>
+<!-- STORY -->
 
-            <div class="footer-col">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+<section class="about-story" id="story">
 
-            <div class="footer-col">
-                <h5>Resources</h5>
-                <ul>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
+<div class="story-container">
 
-            <div class="footer-col">
-                <h5>Contact Us</h5>
-                <div class="contact-list">
-                    <a href="https://wa.me/201150726374" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="https://github.com/YOUR_USERNAME" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="mailto:marwamohamed254@gmail.com">
-                        <i class="fas fa-envelope"></i> Email
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            Copyright © 2023 CODECRAFT. All rights reserved.
-        </div>
-    </footer>
+<div class="story-image">
+<img src="../img/reviews1.jpeg">
+</div>
+
+<div class="story-text">
+
+<h2>Our Story</h2>
+
+<p>
+CodeCraft started with a simple vision: help developers build powerful
+software in a faster and smarter way.
+</p>
+
+<p>
+Our platform focuses on modern design, strong development tools,
+and empowering creative ideas in the tech world.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MISSION -->
+
+<section class="mission">
+
+<h2>Our Mission</h2>
+
+<p>
+Our mission is to empower developers and businesses with innovative
+software solutions that simplify development and inspire creativity.
+</p>
+
+</section>
+
+<!-- TEAM -->
+
+<section class="team">
+
+<h2>Our Team</h2>
+
+<div class="team-container">
+
+<div class="team-card">
+<img src="../img/b3.jpeg">
+<h4>Marwa</h4>
+<p>Frontend Developer</p>
+</div>
+
+<div class="team-card">
+<img src="../img/b2.jpeg">
+<h4>Ahmed</h4>
+<p>Backend Developer</p>
+</div>
+
+<div class="team-card">
+<img src="../img/b1.jpeg">
+<h4>Ali</h4>
+<p>UI Designer</p>
+</div>
+
+</div>
+
+</section>
+<!-- ===== Footer ===== -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col brand-col">
+<div class="logo">
+<img src="../img/logo.png" alt="Logo">
+</div>
+<h3>CODECRAFT is a constant success story in software and software development.</h3>
+</div>
+
+<div class="footer-col">
+<h5>Quick Links</h5>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Resources</h5>
+<ul>
+<li><a href="../html/FAQS.html">FAQs</a></li>
+<li><a href="../html/terms.html">Terms</a></li>
+<li><a href="../html/privacy.html">Privacy Policy</a></li>
+<li><a href="../html/support.html">Support</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h5>Contact Us</h5>
+
+<div class="contact-list">
+
+<a href="https://wa.me/201150726374" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+<a href="https://github.com/YOUR_USERNAME" target="_blank">
+<i class="fab fa-github"></i>
+GitHub
+</a>
+
+<a href="mailto:marwamohamed254@gmail.com">
+<i class="fas fa-envelope"></i>
+Email
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+Copyright © 2026 CODECRAFT. All rights reserved.
+</div>
+
+</footer>
 
 </body>
 </html>
